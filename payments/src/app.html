@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/logo.jpeg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>transitway - plați</title>
+
+		<style>
+			@font-face {
+				font-family: 'Uber Medium';
+				src: url('/UberMoveMedium.otf');
+			}
+
+			@font-face {
+				font-family: 'Uber Bold';
+				src: url('/UberMoveBold.otf');
+			}
+
+			:root {
+				--grey: #fafafa;
+			}
+		</style>		
+
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>

@@ -75,19 +75,17 @@ Users can easily purchase tickets or season tickets directly from the current jo
 7.1 Backend 
 The backend of the Transitway application is based on the programming language Go programming language, an efficient and powerful language for web application development. Instead of the basic HTTP service framework, Transitway uses Fiber , a fast and easy alternative for developing web services in Go. Fiber is based on fasthttp , an HTTP library in Go, which provides superior performance over the standard net/http library. 
 
- 7.1.4 Database and file hosting.  
+7.1.4 Database and file hosting.  
 For data storage, Transitway uses MongoDB , a scalable and flexible NoSQL database. The integration between Go and MongoDB is achieved using the official mongo-go-driver library , which provides advanced functionality for interacting with the database.  
 To optimize performance and reduce access time to frequently used data, Transitway uses Redis , an in-memory caching system. Redis is used in particular to store and access authentication codes quickly, ensuring a smooth user experience. Interaction with Redis is achieved through the Redis for Go library.
 
  7.1.4 Authentication management 
-For managing authentication and sending authentication codes to users via SMS, Transitway uses the Twilio
- service and the twilio-go library. Twilio provides a powerful API for sending SMS messages and managing user interactions.  
+For managing authentication and sending authentication codes to users via SMS, Transitway uses the Twilio service and the twilio-go library. Twilio provides a powerful API for sending SMS messages and managing user interactions.  
 For user authentication and token 
 generation, Transitway uses the sjwt library , which provides advanced functionality for handling and verifying JSON tokens. This library offers enhanced performance over the standard library and is optimized to meet the needs of the application. 
 
- 7.1.4 Data security and encryption 
-To secure sensitive data such as user passwords, Transitway uses the bcrypt hashing
- algorithm. Passcodes are stored in Redis as bcrypt-encrypted hashes using the standard crypto library in Go.  
+7.1.4 Data security and encryption 
+To secure sensitive data such as user passwords, Transitway uses the bcrypt hashing algorithm. Passcodes are stored in Redis as bcrypt-encrypted hashes using the standard crypto library in Go.  
 For JSON data serialization and deserialization, Transitway uses the encoding/json package from the Go standard library. It allows easy conversion of data structures to JSON and vice versa, facilitating communication between client and server. 
 
 7.1.5 Payment system 

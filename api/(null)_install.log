@@ -1,0 +1,73 @@
+###BOTTLING### customprefix.sh
+/Applications/Wine.app/Contents/Frameworks/WBottler.framework/Resources/bottler.sh: line 39: /Applications/Wine.app/Contents/Resources/bin/wine: Bad CPU type in executable
+###BOTTLING### Gathering debug Info...
+
+Versions
+OS...........................: darwin22
+Wine.........................: 
+WineBottler..................: 1.8.6
+Wineticks....................: 20230212-next - sha256sum: 6a36f1911ee48c48978f12a3a0dea33cb871052fcce6910d6e1b664dd9090ac9
+
+Environment
+PWD..........................: '/Applications/Wine.app/Contents/Resources/bin'
+PATH.........................: /Applications/Wine.app/Contents/Resources/bin:/usr/bin:/bin:/usr/sbin:/sbin
+USER.........................: andrei
+HOME.........................: /Users/andrei
+COMPUTERNAME.................: Andreiâs MacBook Pro
+BUNDLERESOURCEPATH...........: /Applications/Wine.app/Contents/Frameworks/WBottler.framework/Resources
+WINEPREFIX...................: /Applications/Wine.app/Contents/Resources
+WINEPATH.....................: /Applications/Wine.app/Contents/Resources/bin
+LD_LIBRARY_PATH..............: /Applications/Wine.app/Contents/Resources/lib:/opt/X11/lib:/usr/X11/lib
+DYLD_FALLBACK_LIBRARY_PATH...: /Applications/Wine.app/Contents/Resources/lib:/usr/lib:/opt/X11/lib:/usr/X11/lib
+SILENT.......................: 
+http_proxy...................: 
+https_proxy..................: 
+ftp_proxy....................: 
+socks5_proxy.................: 
+
+Bottle
+TEMPLATE.....................: 
+BOTTLE.......................: /Users/andrei/Wine Files
+INSTALLER_URL................: 
+INSTALLER_IS_ZIPPED..........: 0
+INSTALLER_NAME...............: 
+INSTALLER_ARGUMENTS..........: 
+REMOVE_MONO..................: 
+REMOVE_GECKO.................: 
+REMOVE_USERS.................: 
+REMOVE_INSTALLERS............: 
+WINETRICKS_ITEMS.............: 
+DLL_OVERRIDES................: 
+EXECUTABLE_PATH..............: notneeded
+EXECUTABLE_ARGUMENTS.........: 
+EXECUTABLE_VERSION...........: 1.0.0
+BUNDLE_COPYRIGHT.............: 
+BUNDLE_IDENTIFIER............: org.kronenberg.winebottler
+BUNDLE_CATEGORYTYPE..........: public.app-category.utilities
+SILENT.......................: 
+
+Hardware:
+
+    Hardware Overview:
+
+      Model Name: Mac
+      Model Identifier: Mac14,7
+      Model Number: MNEJ3B/A
+      Chip: Unknown
+      Total Number of Cores: 8 (4 performance and 4 efficiency)
+      Memory: 8 GB
+      System Firmware Version: 8419.80.7
+      OS Loader Version: 8419.80.7
+      Serial Number (system): Q69XGJ4KX3
+      Hardware UUID: A1367A59-D6D0-5468-A543-E8B14D0C083B
+      Provisioning UDID: A1367A59-D6D0-5468-A543-E8B14D0C083B
+      Activation Lock Status: Enabled
+
+###BOTTLING### Enabling CoreAudio, Colors, Antialiasing  and flat menus...
+/Applications/Wine.app/Contents/Frameworks/WBottler.framework/Resources/bottler.sh: line 134: /Applications/Wine.app/Contents/Resources/bin/wine: Bad CPU type in executable
+### LOG ### Command '/Applications/Wine.app/Contents/Resources/bin/wine regedit /tmp/reg.reg' returned status 126.
+
+
+
+###ERROR### Command '/Applications/Wine.app/Contents/Resources/bin/wine regedit /tmp/reg.reg' returned status 126.
+Task returned with status 1.

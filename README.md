@@ -1,5 +1,6 @@
 # transitway
 
+
 1.What is transitway?
 Transitway is an app that assists with public transport by providing accurate estimates as well as the exact location of transport. Transitway also processes payments to provide ticket and pass purchase service.
 
@@ -13,15 +14,22 @@ Transitway aims to be an integrated system that will benefit both passengers and
 3.2.1 Via the user application, using the device location
 
 4. Transitway trackers
+
 4.1. Real-time location tracker
+
 4.1.1 Operating principle
+
 Every second, the GPS module (see section 4.1.2.1) records data such as latitude, longitude and speed. This data is then sent to the microprocessor (see section 4.1.2.3) for analysis and encryption. The location information is sent to the SIM module (see section 4.1.2.2), which uses cellular connectivity and, via an HTTP POST method, uploads the encrypted data to the server that can use the received data to serve the application users.
-4.1.2 Component
+
+4.1.2 Components
 The transitway tracker is made up of three essential components for locating and transmitting location:
+
 4.1.2.1 GPS module
 GPS module U-Blox NEO 6M offers good performance at a good price. It has a low data acquisition time thanks to the AssistNow Autonomouswhich uses the GNSS to generate location predictions in around 2 seconds. In the future, the module can be replaced with other chips such as UBX-M9340which offer additional functions: Dead Reckoning, better stability and a smaller package with more efficient management.
+
 4.1.2.2 SIM module
 SIM module SIM800L uses the 2G cellular network to send location data to a server. In the future, it may be enhanced with LTE or 5G compatible chips such as SIM8260Efor greater connection stability and extended uptime.
+
 4.1.2.3 Microprocessor
 Microprocessor ATmega328 is cheap and efficient, meeting the requirements for transitway. It operates at 16MHz and has 32KB of flash memory, sufficient for the required operations. 
 
@@ -30,24 +38,32 @@ Microprocessor ATmega328 is cheap and efficient, meeting the requirements for tr
  Thus, the connection with satellites and modules RTC (Real Time Clock) is maintained .
 
 4.2. Tracker for monitoring passenger numbers 
+
 4.2.1 Principle of operation  
 The tracker is designed to record the number of passengers boarding and alighting a means of transport in real time. It uses an infrared (IR) sensor to detect the presence of passengers and an Arduino UNO microcontroller to record the relevant data. The collected information is then transmitted to a server via an 800L SIM module. 
+
 4.2.2 Component  
 The passenger number tracker consists of the following main components:  
+
 4.2.2.1 IR sensor  
 The infrared (IR) sensor is used to detect the presence of passengers in the means of transport. It emits an invisible infrared beam and detects changes in the reflection of the beam. The sensor can be placed in different areas, such as access doors or seats. When a passenger passes through the sensor's range, it registers a change and transmits the information to the microcontroller. 
+
 4.2.2.2 Arduino UNO Microcontroller  
 The Arduino UNO microcontroller is the central component that receives the signals from the IR sensor and manages the passenger count registration. It is also responsible for managing the network connection and transmitting data to the server via the SIM 800L module. 
+
 4.2.2.3 SIM module 800L  
 The SIM 800L module is used to allow the tracker to connect to the cellular network and transmit data to the server via an HTTP POST request. 
+
 4.2.2.4 LED  
 An LED is used to indicate the status of the tracker (faulty/functional)
+
 4.2.2.5 Power supply
 The circuit receives power from a power source via a connector XT60connector with a voltage up to 40V (recommended 12V at 3A).
 
 5. Generating the travel route
 Transitway offers advanced trip route generation functionality, which optimises the route and travel time for users. Using intelligent planning algorithms, the platform analyzes information about the user's location, desired destination, transportation schedule and traffic conditions to identify the most efficient route available. This functionality allows users to quickly get precise directions on how to reach their destination using public transport. Transitway can suggest optimal combinations of buses, trams or other means of transport according to users' preferences. 
 Transitway also monitors real-time traffic conditions and possible delays of transport modes, providing real-time updates and alternatives to ensure smooth journeys and minimise waiting time, using the Routes API from Google Maps.
+
 
 6. Payments and subscriptions
 6.1 Payments
@@ -59,6 +75,8 @@ Users can easily purchase tickets or season tickets directly from the current jo
 7. Backend and Frontend
 7.1 Backend 
 The backend of the Transitway application is based on the programming language Go programming language, an efficient and powerful language for web application development. Instead of the basic HTTP service framework, Transitway uses Fiber , a fast and easy alternative for developing web services in Go. Fiber is based on fasthttp , an HTTP library in Go, which provides superior performance over the standard net/http library. 
+
+For more information about the backend and code go to: https://github.com/transitway/api
 
  7.1.4 Database and file hosting.  
 For data storage, Transitway uses MongoDB , a scalable and flexible NoSQL database. The integration between Go and MongoDB is achieved using the official mongo-go-driver library , which provides advanced functionality for interacting with the database.  
@@ -89,8 +107,10 @@ The application was developed with the Flutterframework, a cross-platform toolse
 Overall, the app combines the power of Flutter's interface tools with libraries such as google_maps_flutter, provider, geolocator and geocoding to create an interactive and feature-rich app for public transport. Using these technologies, the app provides functionality such as map display, route calculation, user location retrieval and location search, providing a seamless user experience across all platforms.
 
 8. User Interface/ User Experience
+
 8.1 Design philosophy
 The interface was found to be very intuitive. Thus, with a small number of taps you can reach any menu.
+
 8.2 The design process
 The UI was designed in Adobe XD to create prototypes of the application. The graphics were designed in Adobe Illustrator and Photoshop and was exported as vectors to maintain its quality.
 From here we refined the design using the criteria:
@@ -99,6 +119,7 @@ From here we refined the design using the criteria:
     -Intuitiveness
 
 9. Method of calculating estimated time of arrival
+
 9.1 Current method
 To provide accurate estimates of estimated arrival times, we combine multiple data sources and advanced technologies. We use the RoutesAPI API from Google Maps to get information about available routes and take into account real-time traffic data.
 Thanks to our advanced approach and the use of multiple data sources, we can ensure high accuracy in providing arrival estimates. We focus on providing real-time information and adjusting estimates according to any changes in traffic conditions.

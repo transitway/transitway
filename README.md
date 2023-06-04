@@ -34,8 +34,7 @@ SIM module SIM800L uses the 2G cellular network to send location data to a serve
 Microprocessor ATmega328 is cheap and efficient, meeting the requirements for transitway. It operates at 16MHz and has 32KB of flash memory, sufficient for the required operations. 
 
 4.1.2.4 Power supply
- The circuit receives power from a power source via an XT60 connector, with a voltage of up to 40V (recommended 12V at 3A). The circuit includes a battery that constantly charges from the main source and takes over power when the source goes off. 
- Thus, the connection with satellites and modules RTC (Real Time Clock) is maintained .
+The circuit receives power from a power source via an XT60 connector, with a voltage of up to 40V (recommended 12V at 3A). The circuit includes a battery that constantly charges from the main source and takes over power when the source goes off. Thus, the connection with satellites and modules RTC (Real Time Clock) is maintained .
 
 4.2. Tracker for monitoring passenger numbers 
 
@@ -76,8 +75,6 @@ Users can easily purchase tickets or season tickets directly from the current jo
 7.1 Backend 
 The backend of the Transitway application is based on the programming language Go programming language, an efficient and powerful language for web application development. Instead of the basic HTTP service framework, Transitway uses Fiber , a fast and easy alternative for developing web services in Go. Fiber is based on fasthttp , an HTTP library in Go, which provides superior performance over the standard net/http library. 
 
-For more information about the backend and code go to: https://github.com/transitway/api
-
  7.1.4 Database and file hosting.  
 For data storage, Transitway uses MongoDB , a scalable and flexible NoSQL database. The integration between Go and MongoDB is achieved using the official mongo-go-driver library , which provides advanced functionality for interacting with the database.  
 To optimize performance and reduce access time to frequently used data, Transitway uses Redis , an in-memory caching system. Redis is used in particular to store and access authentication codes quickly, ensuring a smooth user experience. Interaction with Redis is achieved through the Redis for Go library.
@@ -114,9 +111,9 @@ The interface was found to be very intuitive. Thus, with a small number of taps 
 8.2 The design process
 The UI was designed in Adobe XD to create prototypes of the application. The graphics were designed in Adobe Illustrator and Photoshop and was exported as vectors to maintain its quality.
 From here we refined the design using the criteria:
--Ease of     use
--Modernism     and minimalism
-    -Intuitiveness
+-Ease of use
+-Modernism and minimalism
+-Intuitiveness
 
 9. Method of calculating estimated time of arrival
 
